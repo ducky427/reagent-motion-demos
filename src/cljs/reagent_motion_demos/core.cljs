@@ -75,12 +75,14 @@
   (let [k              (:current-page @app-state)
         current-index  (k demos)]
     [:div
-     [:h1
+     [:h2
       [:span "Reagent"]
       [:span [:a {:href "https://github.com/chenglou/react-motion"}
               " react-motion "]]
-      [:span "demos"]]
-     [:h2 (description k)]
+      [:span "demos. "]
+      [:a {:href "https://github.com/ducky427/reagent-motion-demos"}
+       "Source code"]]
+     [:h3 (description k)]
      [:div.row
       [:div.col-md-6
        (when (not= num-demos (inc current-index))
