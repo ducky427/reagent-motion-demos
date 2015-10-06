@@ -2,7 +2,7 @@
 
 This repo has [react-motion](https://github.com/chenglou/react-motion) demos which have been translated to [reagent](https://reagent-project.github.io/).
 
-[Demo](http://blog.ducky.io/reagent-motion-demos)
+[Demo](https://ducky427.github.io/reagent-motion-demos)
 
 ## License
 
