@@ -81,7 +81,7 @@
               " react-motion "]]
       [:span "demos. "]
       [:a {:href "https://github.com/ducky427/reagent-motion-demos"}
-       "Source code"]]
+       "Source Code"]]
      [:h3 (description k)]
      [:div.row
       [:div.col-md-6
