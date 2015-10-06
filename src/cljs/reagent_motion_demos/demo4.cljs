@@ -55,7 +55,7 @@
                     :position "relative"
                     :margin   "auto"
                     :height   (gobj/get container "height")
-                    :width    (gobj/get container"width")}}
+                    :width    (gobj/get container "width")}}
       (for [i  (range (count photos))
             :let [s  (gobj/get styles (str i))]]
         [:img {:style {:position "absolute"

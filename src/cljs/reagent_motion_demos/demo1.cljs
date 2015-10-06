@@ -22,8 +22,8 @@
   [i x]
   [:div
    {:style {:-webkit-transform (str "translate3d("
-                                   (- (gobj/get x "x") 25) "px, "
-                                   (- (gobj/get x "y") 25) "px, 0)")
+                                    (- (gobj/get x "x") 25) "px, "
+                                    (- (gobj/get x "y") 25) "px, 0)")
             :transform (str "translate3d("
                             (- (gobj/get x "x") 25) "px, "
                             (- (gobj/get x "y") 25) "px, 0)")

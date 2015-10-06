@@ -45,9 +45,9 @@
               :height             "50px"
               :background-color   (nth colors i)
               :-webkit-transform   (str "translate3d("
-                                       (gobj/get b "translateX") "px,"
-                                       (gobj/get b "translateY") "px,0) "
-                                       "scale(" (gobj/get b "scale") ")")
+                                        (gobj/get b "translateX") "px,"
+                                        (gobj/get b "translateY") "px,0) "
+                                        "scale(" (gobj/get b "scale") ")")
               :transform          (str "translate3d("
                                        (gobj/get b "translateX") "px,"
                                        (gobj/get b "translateY") "px,0) "
