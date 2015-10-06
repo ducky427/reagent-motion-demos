@@ -81,7 +81,7 @@
 
 (defn show-demo
   [state data]
-  [:div.display-flex {:style {:cursor "url('/img/cursor.png') 39 39, auto"
+  [:div.display-flex {:style {:cursor "url('img/cursor.png') 39 39, auto"
                               :user-select "none"
                               :background-color "#EEE"
                               :color "#FFF"

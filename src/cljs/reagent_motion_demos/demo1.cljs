@@ -28,7 +28,7 @@
                             (- (gobj/get x "x") 25) "px, "
                             (- (gobj/get x "y") 25) "px, 0)")
             :z-index (- 5 i)
-            :background-image (str "url(/img/" i ".jpg)")
+            :background-image (str "url(img/" i ".jpg)")
             :border-radius "99px"
             :background-color "white"
             :width "50px"
