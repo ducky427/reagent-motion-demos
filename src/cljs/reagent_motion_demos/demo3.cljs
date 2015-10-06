@@ -108,7 +108,7 @@
                             :y      (:mouse data)}
                            {:scale (hc/spring 1 spring-config)
                             :shadow (hc/spring 1 spring-config)
-                            :y      (hc/spring (* 100 j) spring-config)})]]
+                            :y      (hc/spring (* 100 (dec j)) spring-config)})]]
       ^{:key i} [hc/Motion
                  {:style style}
                  (fn [x]
