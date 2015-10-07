@@ -125,7 +125,6 @@
    {:style {:height "80%"
             :width "80%"
             :position "absolute"
-            :background-color "#EEE"
             :align-items "center"
             :justify-content "center"
             :-webkit-align-items "center"

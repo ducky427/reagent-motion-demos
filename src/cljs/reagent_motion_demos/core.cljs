@@ -8,7 +8,8 @@
             [reagent-motion-demos.demo1 :as demo1]
             [reagent-motion-demos.demo2 :as demo2]
             [reagent-motion-demos.demo3 :as demo3]
-            [reagent-motion-demos.demo4 :as demo4])
+            [reagent-motion-demos.demo4 :as demo4]
+            [reagent-motion-demos.demo5 :as demo5])
   (:import goog.History))
 
 (enable-console-print!)
@@ -17,13 +18,15 @@
             :demo1 1
             :demo2 2
             :demo3 3
-            :demo4 4})
+            :demo4 4
+            :demo5 5})
 
 (def description {:demo0 "Simple Transition"
                   :demo1 "Chat heads"
                   :demo2 "Draggable Balls"
                   :demo3 "Draggable List"
-                  :demo4 "Photo Gallery"})
+                  :demo4 "Photo Gallery"
+                  :demo5 "TodoMVC List Transition"})
 
 (def num-demos (count demos))
 
@@ -46,6 +49,13 @@
                                                    [200 650]
                                                    [600 600]]
                                           :current 0}
+                                  :demo5 {:todos {"1" {:text "Board the plane" :done? false}
+                                                  "2" {:text "Sleep" :done? false}
+                                                  "3" {:text "Eat cheese and drink wine" :done? false}
+                                                  "4" {:text "Show Demo 1" :done? false}
+                                                  "5" {:text "Show Demo 2" :done? false}}
+                                          :value ""
+                                          :selected :all}
                                   :current-page :demo0}))
 
 (defmulti show-page (fn [x _] x))
@@ -69,6 +79,10 @@
 (defmethod show-page :demo4
   [_ state]
   [demo4/show-demo state @state])
+
+(defmethod show-page :demo5
+  [_ state]
+  [demo5/show-demo state @state])
 
 (defn current-page
   []
@@ -115,6 +129,9 @@
 
 (secretary/defroute "/demo4" []
   (swap! app-state assoc :current-page :demo4))
+
+(secretary/defroute "/demo5" []
+  (swap! app-state assoc :current-page :demo5))
 
 ;; -------------------------
 ;; History

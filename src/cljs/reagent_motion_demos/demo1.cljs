@@ -43,8 +43,7 @@
     [:div
      {:style {:width "80%"
               :height "80%"
-              :position "absolute"
-              :background-color "#EEE"}
+              :position "absolute"}
       :on-mouse-move #(swap! state
                              assoc
                              :x (.-pageX %)
