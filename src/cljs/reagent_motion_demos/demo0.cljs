@@ -1,24 +1,26 @@
 (ns reagent-motion-demos.demo0
   (:require [reagent.core :as reagent]
+            [goog.object :as gobj]
             [reagent-motion-demos.common :as hc]))
 
 (defn Child
-  [{x :x}]
-  [:div {:style {:border-radius "4px"
-                 :background-color "rgb(240,240,232)"
-                 :position "relative"
-                 :margin "5px 3px 10px"
-                 :width "450px"
-                 :height "50px"}}
-   [:div
-    {:style
-     {:position "absolute"
-      :width "50px"
-      :height "50px"
-      :border-radius "4px"
-      :background-color "rgb(130, 181, 198)"
-      :-webkit-transform (str "translateX(" x "px)")
-      :transform (str "translateX(" x "px)")}}]])
+  [{c :children}]
+  (let [x  (gobj/get c "x")]
+    [:div {:style {:border-radius "4px"
+                   :background-color "rgb(240,240,232)"
+                   :position "relative"
+                   :margin "5px 3px 10px"
+                   :width "450px"
+                   :height "50px"}}
+     [:div
+      {:style
+       {:position "absolute"
+        :width "50px"
+        :height "50px"
+        :border-radius "4px"
+        :background-color "rgb(130, 181, 198)"
+        :-webkit-transform (str "translateX(" x "px)")
+        :transform (str "translateX(" x "px)")}}]]))
 
 (def Child-comp (reagent/reactify-component Child))
 
@@ -35,4 +37,4 @@
                                        400
                                        0))}}
     (fn [x]
-      (reagent/create-element Child-comp x))]])
+      (reagent/create-element Child-comp #js {} x))]])
