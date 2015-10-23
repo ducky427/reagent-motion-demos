@@ -58,7 +58,7 @@
                                           :selected :all}
                                   :current-page :demo0}))
 
-(defmulti show-page (fn [x _] x))
+(defmulti show-page first)
 
 (defmethod show-page :demo0
   [_ state]
